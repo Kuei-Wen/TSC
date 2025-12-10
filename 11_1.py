@@ -2,14 +2,13 @@ import os
 import pandas as pd
 import numpy as np
 import yfinance as yf
-import google.generativeai as genai
+import ollama
 from datetime import datetime, timedelta
 
-# 設定 Gemini API Key（建議用環境變數）
-GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyBnIn9k5-O-SaYhvHwWniT5RgsKx26KX54")
-genai.configure(api_key=GEMINI_KEY)
+# 設定 Ollama API Key（建議用環境變數）
 
-MODEL_NAME = "gemini-1.5-flash"  # 速度快、夠便宜
+
+MODEL_NAME = "llama3"  # 速度快、夠便宜
 
 TICKER = "AAPL"        # 例：AAPL / TSLA / 2330.TW
 PERIOD = "6mo"         # 過去 6 個月
@@ -87,7 +86,7 @@ facts = {
     f"RSI_{RSI_PERIOD}": round(rsi_now, 2),
     "ma_cross": cross
 }
-facts
+#facts
 
 
 def humanize_interpretation(f):
@@ -127,7 +126,11 @@ def humanize_interpretation(f):
 
 #print("工程師口吻解讀：", humanize_interpretation(facts))
 
-model = genai.GenerativeModel(MODEL_NAME)
+#model = genai.GenerativeModel(MODEL_NAME)
+repobse = ollama.generate(
+    model ="llama3",
+    prompt= humanize_interpretation(facts)
+)
 
 prompt = f"""
 你是一位投資教練，請把下面的技術指標數據，翻成一般人也能聽懂的「白話解讀」，
@@ -145,8 +148,11 @@ prompt = f"""
 """
 
 try:
-    res = model.generate_content(prompt)
-    print(res.text)
+    response = ollama.generate(
+    model ="llama3",
+    prompt= prompt
+)
+    print(response["response"])
 except Exception as e:
     print("Gemini 呼叫失敗，改用本地解讀：")
     print(humanize_interpretation(facts))
