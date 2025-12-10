@@ -1,9 +1,7 @@
-import os, time, feedparser, pandas as pd, google.generativeai as genai
+import os, time, feedparser, pandas as pd
 from urllib.parse import quote_plus
-
+import ollama
 # 設定 API Key
-genai.configure(api_key="AIzaSyBnIn9k5-O-SaYhvHwWniT5RgsKx26KX54")
-model = genai.GenerativeModel("gemini-2.5-flash")
 
 def fetch_google_news(query: str, lang="zh-Hant", region="TW", max_items: int = 20):
     """
