@@ -47,7 +47,11 @@ def sentiment_batch_gemini_bulk(headlines: list[str], summaries: list[str] | Non
 ]
     """
 
-    res = model.generate_content(prompt)
+    res =ollama.generate(
+    model ="llama3",
+    prompt= prompt
+    )
+
 
     # 嘗試取回文字
     output_text = res.text.strip() if hasattr(res, "text") else res.candidates[0].content.parts[0].text.strip()
