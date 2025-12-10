@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 import yfinance as yf
-import ollama
+from  ollama import Client
 from datetime import datetime, timedelta
 
 # 設定 Ollama API Key（建議用環境變數）
@@ -128,7 +128,7 @@ def humanize_interpretation(f):
 
 #model = genai.GenerativeModel(MODEL_NAME)
 repobse = ollama.generate(
-    model ="llama3",
+    model ="deepseek-r1:1.5b",
     prompt= humanize_interpretation(facts)
 )
 
@@ -148,9 +148,14 @@ prompt = f"""
 """
 
 try:
-    response = ollama.generate(
-    model ="llama3",
-    prompt= prompt
+    #response = ollama.generate(
+    #model ="deepseek-r1:1.5b",
+    #prompt= prompt
+    client =Client(
+host="http://192.168.31.137:11434",
+      headers ="{Authorization: Bearer "+os.getenv("OLLAMA_API_KEY")+"}"
+
+    )
 )
     print(response["response"])
 except Exception as e:
