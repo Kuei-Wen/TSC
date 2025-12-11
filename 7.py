@@ -1,6 +1,9 @@
 import yfinance as yf
 import pandas as pd
 
+
+
+
 # 設定投資組合
 stocks = ["AAPL", "MSFT", "GOOG", "TSLA"]
 weights = [0.25, 0.25, 0.25, 0.25]  # 均等分散

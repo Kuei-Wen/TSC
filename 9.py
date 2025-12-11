@@ -4,6 +4,10 @@ google_api_key="AIzaSyBnIn9k5-O-SaYhvHwWniT5RgsKx26KX54"
 os.environ["GOOGLE_API_KEY"] = google_api_key
 client = genai.Client()
 
+
+
+
+
 prompt = """
 請幫我撰寫一份「分散投資」的分析，要求：
 1. 列出至少三個優點

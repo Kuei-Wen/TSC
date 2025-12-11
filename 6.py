@@ -1,6 +1,9 @@
 import yfinance as yf
 import pandas as pd
 
+
+
+
 # 下載台積電ADR的歷史股價
 stock = yf.download("TSM", start="2023-01-01", end="2025-01-01")
 
