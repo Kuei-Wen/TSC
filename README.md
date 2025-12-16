@@ -1,7 +1,8 @@
 https://github.com/Kuei-Wen/
 
 
-test
+ollama down model from docker 
+docker exec -it ollama ollama run gemma:2b
 
 总体建议
 综合推荐：Llama 3 - 最均衡的性能

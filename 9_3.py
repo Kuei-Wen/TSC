@@ -1,4 +1,4 @@
-import ollama
+import openai
 import requests
 import json
 import os
@@ -34,7 +34,7 @@ prompt3 = """
 
 
 
-url = 'http://192.168.31.137:11434/api/chat'
+url = 'http://localhost:11434/api/chat'
 payload = {
     "model": "llama3.2",
     "temperature": 0.6,
@@ -47,8 +47,5 @@ payload = {
 
 #如果切換成 CPU 這邊會跑很久，大概要 1 分鐘，建議還是用 GPU
 response = requests.post(url, json=payload)
-message_str = response.content.decode('utf-8')
-message_dict = json.loads(message_str)
-print(message_dict['message']['content'])
 print(response.text) # output is often markdown
 
