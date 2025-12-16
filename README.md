@@ -17,3 +17,13 @@ Gemma 2	2B	1.6GB	ollama run gemma2:2b
 Mistral	7B	4.1GB	ollama run mistral
 Code Llama	7B	3.8GB	ollama run codellama
 運行 7B 模型需要至少 8GB RAM，13B 模型需要 16GB RAM，33B 模型需要 32GB RAM。
+
+
+
+git無法合併時
+在push之前，我需要
+git fetch
+git merge
+將遠端的改變用merge合併到本地上。
+
+或是我可以用git push -f 強制覆蓋本地文件替代git儲存庫的內容。
