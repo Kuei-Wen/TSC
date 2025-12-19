@@ -2,7 +2,13 @@ import openai
 import requests
 import json
 import os
+from dotenv import load_dotenv
 
+# 載入 .env 環境變數（確保你已經在 .env 檔案中設定 OPENAI_API_KEY）
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# 建立 OpenAI 客戶端
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 prompt = """
 請幫我撰寫一份「分散投資」的分析，要求：
