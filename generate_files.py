@@ -60,7 +60,7 @@ def replace_file_content(filepath, old_string, new_string):
     load_dotenv()
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     NEWS_API_KEY = os.getenv("NEWS_API_KEY")
-def OpenaiProcess(df , start_date , end_date):
+def OpenaiProcess(id,df , start_date , end_date):
     df["ma5"] =df["close"].rolling(window=5).mean()
     df["ma20"] =df["close"].rolling(window=20).mean()
     df["ma60"] =df["close"].rolling(window=60).mean()
@@ -113,7 +113,7 @@ def generate(id: str) -> int:
         os.remove(os.getcwd()+"\\"+ f"{id}.html")   
     shutil.copyfile("base.html", f"{id}.html")
     replace_file_content(os.getcwd()+"\\"+ f"{id}.html", "@@title", id)
-    res=OpenaiProcess(df,start_date,end_date)
+    res=OpenaiProcess(id,df,start_date,end_date)
     addAiPrompt(res,os.getcwd()+"\\"+ f"{id}.html")
 
     return 1
