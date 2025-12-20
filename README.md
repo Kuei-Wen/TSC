@@ -1,4 +1,4 @@
-https://github.com/Kuei-Wen/
+https://github.com/Kuei-Wen/TSC.git
 AI 給我錢錢錢 ！ AI 股神養成計劃
 https://ithelp.ithome.com.tw/users/20169444/ironman/8342?page=1
 
