@@ -5,3 +5,4 @@ html
 __pycache__/
 log.log
 client_secret.json
+*.json
