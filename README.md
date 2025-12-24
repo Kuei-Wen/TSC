@@ -14,3 +14,6 @@ git無法合併時 在push之前，我需要 git fetch git merge 將遠端的改
 或是我可以用git push -f 強制覆蓋本地文件替代git儲存庫的內容。
 
 安裝psycopg2的方法 pip install psycopg2-binary
+
+如何使用免費雲端儲存託管網站
+https://github.com/d-evil0per/serverless-hosting
