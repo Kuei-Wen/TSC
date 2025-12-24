@@ -20,3 +20,5 @@ https://github.com/d-evil0per/serverless-hosting
 
 免費網絡詑管
 https://zh.wix.com/free/web-hosting
+
+用Github pages with Git commit
