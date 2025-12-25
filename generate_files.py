@@ -90,9 +90,30 @@ def addAiPrompt(res,fi):
 
 
 
+def CopyFileToDest(id:str):
+    pa ="C:/python/LLm/html/"
+    src_html = os.getcwd()+"\\"+ f"{id}.html"
+    src_js = os.getcwd()+"\\"+ f"{id}.js"
+    dest_html = pa + f"{id}.html"
+    dest_js = pa + f"{id}.js"
+    if os.path.exists(dest_html):
+        os.remove(dest_html)
+    if os.path.exists(dest_js):
+        os.remove(dest_js)
 
-
-
+    shutil.copyfile(src_html, dest_html)
+    shutil.copyfile(src_js, dest_js)
+    logging.info(f"Copied {src_html} to {dest_html}")
+    logging.info(f"Copied {src_js} to {dest_js}")
+def GitPush():
+    os.chdir("C:/python/LLm/html")
+    os.system("git config --global user.name 'kuei-wen'")
+    os.system("git config --global user.email 'kueiwen@gmail.com'")
+    os.system("git add *.html")
+    os.system("git add *.js")
+    os.system(f"git commit -m '{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}' auto commit")
+    os.system("git push origin main")
+    logging.info("Git push completed.")
 
 def generate(id: str) -> int:
     logging.info(f"id:{id}")
@@ -114,10 +135,14 @@ def generate(id: str) -> int:
     shutil.copyfile("base.html", f"{id}.html")
     replace_file_content(os.getcwd()+"\\"+ f"{id}.html", "@@title", id)
     res=OpenaiProcess(id,df,start_date,end_date)
+    logging.info(f"AI Response:")
     addAiPrompt(res,os.getcwd()+"\\"+ f"{id}.html")
-    GoogleDrive.Upload_Files()
-    LineApp.SendMessage(f"{id} 檔案已產生並上傳完成")
-
+    logging.info(f"Adding AI Prompt completed.")
+    CopyFileToDest(id)
+    logging.info(f"File copy completed.")   
+    LineApp.SendMessage(f"{id} 檔案已產生並上傳完成,https://kuei-wen.github.io/html/0056.html")
+    logging.info(f"Line message sent.")
+    GitPush()
     return 1
 
 
