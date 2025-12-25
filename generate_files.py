@@ -111,7 +111,11 @@ def GitPush():
     os.system("git config --global user.email 'kueiwen@gmail.com'")
     os.system("git add *.html")
     os.system("git add *.js")
-    os.system(f"git commit -m '{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}' auto commit")
+    now = datetime.now()
+
+    # Convert to string in YYYY-MM-DD HH:MM:SS format
+    current_time_str = now.strftime("%Y-%m-%d %H:%M:%S") 
+    os.system(f"git commit -m {current_time_str} auto commit")
     os.system("git push origin main")
     logging.info("Git push completed.")
 
