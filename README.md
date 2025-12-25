@@ -18,7 +18,7 @@ git無法合併時 在push之前，我需要 git fetch git merge 將遠端的改
 如何使用免費雲端儲存託管網站
 https://github.com/d-evil0per/serverless-hosting
 
-免費網絡詑管
-https://zh.wix.com/free/web-hosting
+免費雲端
+https://sites.google.com/view/kueiwen/%E9%A6%96%E9%A0%81
 
 用Github pages with Git commit

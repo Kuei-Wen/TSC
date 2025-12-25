@@ -7,4 +7,5 @@ log.log
 client_secret.json
 *.json
 *.c
+*.sql
 requirements.txt

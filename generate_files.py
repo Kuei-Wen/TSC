@@ -1,4 +1,4 @@
-import Stock_Data
+import Stock_Data , GoogleDrive , LineApp
 import os
 from datetime import  date , timedelta
 import datetime
@@ -115,6 +115,8 @@ def generate(id: str) -> int:
     replace_file_content(os.getcwd()+"\\"+ f"{id}.html", "@@title", id)
     res=OpenaiProcess(id,df,start_date,end_date)
     addAiPrompt(res,os.getcwd()+"\\"+ f"{id}.html")
+    GoogleDrive.Upload_Files()
+    LineApp.SendMessage(f"{id} 檔案已產生並上傳完成")
 
     return 1
 
