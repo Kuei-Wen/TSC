@@ -9,6 +9,7 @@ from pathlib import Path
 import ta
 import openai
 from dotenv import load_dotenv
+import pandas as pd
 
 
 
