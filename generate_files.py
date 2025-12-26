@@ -1,4 +1,4 @@
-import Stock_Data , LineApp
+import Stock_Data , LineApp , console
 import os
 from datetime import  date , timedelta
 import datetime
@@ -106,19 +106,7 @@ def CopyFileToDest(id:str):
     shutil.copyfile(src_js, dest_js)
     logging.info(f"Copied {src_html} to {dest_html}")
     logging.info(f"Copied {src_js} to {dest_js}")
-def GitPush():
-    os.chdir("C:/python/LLm/html")
-    os.system("git config --global user.name 'kuei-wen'")
-    os.system("git config --global user.email 'kueiwen@gmail.com'")
-    os.system("git add *.html")
-    os.system("git add *.js")
-    now = datetime.now()
 
-    # Convert to string in YYYY-MM-DD HH:MM:SS format
-    current_time_str = now.strftime("%Y-%m-%d %H:%M:%S") 
-    os.system(f"git commit -m {current_time_str} auto commit")
-    os.system("git push origin main")
-    logging.info("Git push completed.")
 
 def generate(id: str) -> int:
     logging.info(f"id:{id}")
@@ -148,7 +136,7 @@ def generate(id: str) -> int:
     logging.info(f"File copy completed.")   
     LineApp.SendMessage(f"{id} 檔案已產生並上傳完成,https://kuei-wen.github.io/html/0056.html")
     logging.info(f"Line message sent.")
-    GitPush()
+    console.GitPush()
     return 1
 
 
