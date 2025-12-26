@@ -1,4 +1,4 @@
-import Stock_Data , GoogleDrive , LineApp
+import Stock_Data , LineApp
 import os
 from datetime import  date , timedelta
 import datetime
