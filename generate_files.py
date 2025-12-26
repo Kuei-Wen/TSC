@@ -128,6 +128,7 @@ def generate(id: str) -> int:
     logging.info(f"start_date:{start_date}")
     logging.info(f"end_date:{end_date}")
     df =Stock_Data.getData(id ,start_date,end_date)
+    df[0]=pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
 
     logging.info("DataFrame")
     logging.info(df.head())
