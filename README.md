@@ -24,3 +24,6 @@ https://sites.google.com/view/kueiwen/%E9%A6%96%E9%A0%81
 用Github pages with Git commit
 https://kuei-wen.github.io/html/
 
+树莓派使用Git上传代码到Github
+https://blog.csdn.net/qq_61605392/article/details/141495720
+
