@@ -6,7 +6,7 @@ __pycache__/
 log.log
 client_secret.json
 *.json
-*.c
+*.cs
 *.sql
 requirements.txt
 1.py
