@@ -21,7 +21,7 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
-llm = OpenAI(temperature=0.9)
+llm = OpenAI(temperature=0.9, openai_api_key=OPENAI_API_KEY)
 
 # 2. Create a Prompt Template
 # The template will be filled with the variable 'product'
