@@ -27,3 +27,6 @@ https://kuei-wen.github.io/html/
 树莓派使用Git上传代码到Github
 https://blog.csdn.net/qq_61605392/article/details/141495720
 
+Playwright + Test Design + AI Agent：自動化測試實戰 系列(含利用LLM的部份)
+https://ithelp.ithome.com.tw/articles/10382199
+
