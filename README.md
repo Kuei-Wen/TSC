@@ -30,3 +30,6 @@ https://blog.csdn.net/qq_61605392/article/details/141495720
 Playwright + Test Design + AI Agent：自動化測試實戰 系列(含利用LLM的部份)
 https://ithelp.ithome.com.tw/articles/10382199
 
+
+30天 Git 版本控制實戰筆記
+https://ithelp.ithome.com.tw/articles/10387797
