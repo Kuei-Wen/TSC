@@ -37,3 +37,8 @@ https://ithelp.ithome.com.tw/articles/10387797
 
 GitHub Spec Kit
 https://microsoftlearning.github.io/mslearn-github-copilot-dev/Instructions/Labs/LAB_AK_13_implement-spec-driven-development.html
+
+
+AI-Driven Development - 個人開發者的敏捷實踐 
+https://ithelp.ithome.com.tw/users/20149301/ironman/8437
+
