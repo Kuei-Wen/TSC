@@ -33,3 +33,7 @@ https://ithelp.ithome.com.tw/articles/10382199
 
 30天 Git 版本控制實戰筆記
 https://ithelp.ithome.com.tw/articles/10387797
+
+
+GitHub Spec Kit
+https://microsoftlearning.github.io/mslearn-github-copilot-dev/Instructions/Labs/LAB_AK_13_implement-spec-driven-development.html
