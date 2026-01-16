@@ -1,44 +1,79 @@
-https://github.com/Kuei-Wen/TSC.git
-AI 給我錢錢錢 ！ AI 股神養成計劃
-https://ithelp.ithome.com.tw/users/20169444/ironman/8342?page=1
+# Auto Subtitle Generator
 
+This script automatically generates subtitles for a video file in a specified language and merges them into the video.
 
-ollama down model from docker docker exec -it ollama ollama run gemma:2b
+## How it works
 
-总体建议 综合推荐：Llama 3 - 最均衡的性能 追求速度：Mistral - 响应快，准确度也不错 资源有限：Orca Mini - 小而精 您可以先测试一个或两个模型，看哪个更适合您的具体财务分析场景。
+1.  **Extracts Audio:** The script first uses `ffmpeg` to extract the audio from the input video file.
+2.  **Generates Subtitles:** It then uses OpenAI's `whisper` model to transcribe the audio and generate a subtitle file (`.srt`).
+3.  **Merges Subtitles:** Finally, it uses `ffmpeg` again to merge the generated subtitle file into the original video, creating a new video file with embedded subtitles.
 
-模型 參數 大小 下載命令 Llama 3.1 8B 4.7GB ollama run llama3.1 Phi 3 Mini 3.8B 2.3GB ollama run phi3 Gemma 2 2B 1.6GB ollama run gemma2:2b Mistral 7B 4.1GB ollama run mistral Code Llama 7B 3.8GB ollama run codellama 運行 7B 模型需要至少 8GB RAM，13B 模型需要 16GB RAM，33B 模型需要 32GB RAM。
+## Dependencies
 
-git無法合併時 在push之前，我需要 git fetch git merge 將遠端的改變用merge合併到本地上。
+This script requires the following dependencies:
 
-或是我可以用git push -f 強制覆蓋本地文件替代git儲存庫的內容。
+-   **Python 3:** The programming language used to run the script.
+-   **`openai-whisper`:** A Python package for automatic speech recognition.
+-   **`ffmpeg`:** A command-line tool for handling video and audio.
 
-安裝psycopg2的方法 pip install psycopg2-binary
+### Installation
 
-如何使用免費雲端儲存託管網站
-https://github.com/d-evil0per/serverless-hosting
+1.  **Install `openai-whisper`:**
 
-免費雲端
-https://sites.google.com/view/kueiwen/%E9%A6%96%E9%A0%81
+    You can install the `whisper` library using `pip`. It's recommended to also install `torch` and `torchaudio` for GPU support if you have a compatible NVIDIA GPU, as this will significantly speed up the transcription process.
 
-用Github pages with Git commit
-https://kuei-wen.github.io/html/
+    ```bash
+    pip install openai-whisper
+    # For GPU support with PyTorch
+    # pip install torch torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
+    ```
+    For more details on installing with GPU support, please refer to the official PyTorch documentation.
 
-树莓派使用Git上传代码到Github
-https://blog.csdn.net/qq_61605392/article/details/141495720
+2.  **Install `ffmpeg`:**
 
-Playwright + Test Design + AI Agent：自動化測試實戰 系列(含利用LLM的部份)
-https://ithelp.ithome.com.tw/articles/10382199
+    `ffmpeg` is a system dependency that needs to be installed separately.
 
+    -   **Windows:**
+        1.  Download the latest build from the [ffmpeg website](https://ffmpeg.org/download.html).
+        2.  Extract the downloaded archive.
+        3.  Add the `bin` directory from the extracted folder to your system's `PATH` environment variable.
 
-30天 Git 版本控制實戰筆記
-https://ithelp.ithome.com.tw/articles/10387797
+    -   **macOS (using Homebrew):**
+        ```bash
+        brew install ffmpeg
+        ```
 
+    -   **Linux (using apt):**
+        ```bash
+        sudo apt update && sudo apt install ffmpeg
+        ```
 
-GitHub Spec Kit
-https://microsoftlearning.github.io/mslearn-github-copilot-dev/Instructions/Labs/LAB_AK_13_implement-spec-driven-development.html
+    To verify that `ffmpeg` is installed correctly and available in your PATH, you can run `ffmpeg -version` in your terminal.
 
+## How to Run the Script
 
-AI-Driven Development - 個人開發者的敏捷實踐 
-https://ithelp.ithome.com.tw/users/20149301/ironman/8437
+Once you have installed the dependencies, you can run the `auto_subtitle.py` script from your terminal.
 
+### Usage
+
+```bash
+python auto_subtitle.py <video_path> [-l <language>]
+```
+
+-   `<video_path>`: (Required) The path to the input video file (e.g., `my_video.mp4`).
+-   `-l <language>`: (Optional) The language of the audio in the video. Use a two-letter ISO-639-1 language code (e.g., `en` for English, `es` for Spanish, `ja` for Japanese). If not specified, it defaults to English (`en`).
+
+### Example
+
+To generate English subtitles for a video named `presentation.mp4`:
+
+```bash
+python auto_subtitle.py presentation.mp4 -l en
+```
+
+The script will produce the following files:
+
+-   `presentation.srt`: The generated subtitle file.
+-   `presentation_subtitled.mp4`: The final video with the subtitles merged in.
+
+A temporary audio file (`presentation_temp_audio.mp3`) will be created during the process but will be deleted automatically upon completion.
