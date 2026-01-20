@@ -1,79 +1,67 @@
-# Auto Subtitle Generator
+# 影片聲音轉文字工具
 
-This script automatically generates subtitles for a video file in a specified language and merges them into the video.
+這是一個 Python 程式，可以從影片檔案中提取聲音，並使用 OpenAI 的 Whisper 模型將其轉換為文字稿。
 
-## How it works
+## 功能
 
-1.  **Extracts Audio:** The script first uses `ffmpeg` to extract the audio from the input video file.
-2.  **Generates Subtitles:** It then uses OpenAI's `whisper` model to transcribe the audio and generate a subtitle file (`.srt`).
-3.  **Merges Subtitles:** Finally, it uses `ffmpeg` again to merge the generated subtitle file into the original video, creating a new video file with embedded subtitles.
+1.  從各種常見的影片格式中提取音訊。
+2.  將提取出的音訊儲存為 `.wav` 檔案。
+3.  使用 `openai-whisper` 套件將 `.wav` 檔案的內容轉換為文字。
+4.  將生成的文字稿儲存為與影片同名的 `.txt` 檔案。
+5.  自動清理暫時生成的 `.wav` 檔案。
 
-## Dependencies
+## 安裝與設定
 
-This script requires the following dependencies:
+### 1. 前置需求：FFmpeg
 
--   **Python 3:** The programming language used to run the script.
--   **`openai-whisper`:** A Python package for automatic speech recognition.
--   **`ffmpeg`:** A command-line tool for handling video and audio.
+`moviepy` 和 `whisper` 都需要 `FFmpeg` 這個強大的多媒體處理工具。請先確保您的系統上已安裝 `FFmpeg`。
 
-### Installation
+- **Windows**:
+  1.  從 [FFmpeg 官網](https://ffmpeg.org/download.html) 下載。
+  2.  解壓縮後，將其 `bin` 資料夾的路徑新增到系統的 `PATH` 環境變數中。
+- **macOS (使用 Homebrew)**:
+  ```bash
+  brew install ffmpeg
+  ```
+- **Linux (使用 apt)**:
+  ```bash
+  sudo apt update && sudo apt install ffmpeg
+  ```
 
-1.  **Install `openai-whisper`:**
+您可以透過在終端機執行 `ffmpeg -version` 來確認是否安裝成功。
 
-    You can install the `whisper` library using `pip`. It's recommended to also install `torch` and `torchaudio` for GPU support if you have a compatible NVIDIA GPU, as this will significantly speed up the transcription process.
+### 2. 安裝 Python 套件
 
-    ```bash
-    pip install openai-whisper
-    # For GPU support with PyTorch
-    # pip install torch torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
-    ```
-    For more details on installing with GPU support, please refer to the official PyTorch documentation.
-
-2.  **Install `ffmpeg`:**
-
-    `ffmpeg` is a system dependency that needs to be installed separately.
-
-    -   **Windows:**
-        1.  Download the latest build from the [ffmpeg website](https://ffmpeg.org/download.html).
-        2.  Extract the downloaded archive.
-        3.  Add the `bin` directory from the extracted folder to your system's `PATH` environment variable.
-
-    -   **macOS (using Homebrew):**
-        ```bash
-        brew install ffmpeg
-        ```
-
-    -   **Linux (using apt):**
-        ```bash
-        sudo apt update && sudo apt install ffmpeg
-        ```
-
-    To verify that `ffmpeg` is installed correctly and available in your PATH, you can run `ffmpeg -version` in your terminal.
-
-## How to Run the Script
-
-Once you have installed the dependencies, you can run the `auto_subtitle.py` script from your terminal.
-
-### Usage
+複製這個專案後，在終端機中執行以下指令來安裝所有必要的 Python 套件：
 
 ```bash
-python auto_subtitle.py <video_path> [-l <language>]
+pip install -r requirements.txt
 ```
 
--   `<video_path>`: (Required) The path to the input video file (e.g., `my_video.mp4`).
--   `-l <language>`: (Optional) The language of the audio in the video. Use a two-letter ISO-639-1 language code (e.g., `en` for English, `es` for Spanish, `ja` for Japanese). If not specified, it defaults to English (`en`).
+## 如何使用
 
-### Example
-
-To generate English subtitles for a video named `presentation.mp4`:
+在終端機中使用以下指令來執行程式。您需要提供影片檔案的路徑。
 
 ```bash
-python auto_subtitle.py presentation.mp4 -l en
+python video_to_text.py [您的影片檔案路徑]
 ```
 
-The script will produce the following files:
+**範例:**
 
--   `presentation.srt`: The generated subtitle file.
--   `presentation_subtitled.mp4`: The final video with the subtitles merged in.
+```bash
+python video_to_text.py "C:\MyVideos\lecture_01.mp4"
+```
 
-A temporary audio file (`presentation_temp_audio.mp3`) will be created during the process but will be deleted automatically upon completion.
+程式執行後，會在 `C:\MyVideos\` 資料夾下生成一個名為 `lecture_01.txt` 的文字檔案。
+
+### 選擇不同的 Whisper 模型
+
+您可以透過 `--model` 參數來選擇不同大小的 Whisper 模型。模型越大，準確率越高，但需要的計算資源和時間也越多。
+
+可用的模型包括：`tiny`, `base`, `small`, `medium`, `large`。預設為 `base`。
+
+**範例 (使用 small 模型):**
+
+```bash
+python video_to_text.py "my_video.mov" --model small
+```
