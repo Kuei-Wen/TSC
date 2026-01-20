@@ -65,3 +65,6 @@ python video_to_text.py "C:\MyVideos\lecture_01.mp4"
 ```bash
 python video_to_text.py "my_video.mov" --model small
 ```
+
+
+Git Hub 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
