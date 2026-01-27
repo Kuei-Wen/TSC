@@ -121,3 +121,23 @@ r'(\d+)\r?\n(\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3})\r?\n([\s\S]*?)
 若在 Windows 上遇不到匹配，請檢查並改用 \r?\n 或先把檔案 newline 正規化為 \n。
 需要我把程式中的 pattern 直接改為支援 CRLF 的版本並跑個小測試嗎？
 
+
+
+基於 playwright 的萬用AI爬蟲 Crawl4AI
+
+
+Playwright + Test Design + AI Agent：自動化測試實戰 系列
+https://ithelp.ithome.com.tw/m/users/20169442/ironman/8719
+
+
+https://playwright.dev/docs/writing-tests
+
+Playwright 玩家攻略：從新手村到魔王關系
+https://ithelp.ithome.com.tw/articles/10376953
+
+Google翻譯API
+https://ithelp.ithome.com.tw/m/articles/10218704
+
+
+
+
