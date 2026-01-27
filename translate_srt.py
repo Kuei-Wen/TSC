@@ -2,6 +2,7 @@ import translators as ts
 import re
 import argparse
 import os
+import logging
 
 def translate_srt(input_file, output_file=None, target_language='zh-TW'):
     """
@@ -26,6 +27,7 @@ def translate_srt(input_file, output_file=None, target_language='zh-TW'):
         with open(input_file, 'r', encoding='utf-8') as f:
             try:
                 content = f.read()
+                logging.info(f'file content: {content}')
             except Exception as e:
                 print(f"讀取檔案時發生錯誤: {e}")
                 return
