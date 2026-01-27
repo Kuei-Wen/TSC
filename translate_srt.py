@@ -21,10 +21,16 @@ def translate_srt(input_file, output_file=None, target_language='zh-TW'):
         basename, ext = os.path.splitext(input_file)
         output_file = f"{basename}_{target_language}{ext}"
 
+    content=""
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
-            content = f.read()
-
+            try:
+                content = f.read()
+            except Exception as e:
+                print(f"讀取檔案時發生錯誤: {e}")
+                return
+            finally:
+                f.close()
         # 使用正規表達式來匹配字幕塊，這樣更穩健
         # (字幕序號)\n(時間 --> 時間)\n(字幕內容)
         pattern = re.compile(r'(\d+)\n(\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3})\n([\s\S]*?(?=\n\n|\Z))', re.MULTILINE) 
