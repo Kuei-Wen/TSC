@@ -117,65 +117,8 @@ Fontsize：字幕的文字大小，預設值為 16
 https://magiclen.org/ffmpeg-subtitle/
 
 
-範例程式
-import subprocess
-import os
-import sys
-def validate_file(file_path, file_type="file"):
-    """验证文件是否存在"""
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"{file_type.capitalize()} 文件不存在: {file_path}")
-    print(f"{file_type.capitalize()} 已验证: {file_path}")
-    return True
-def merge_video_with_subtitles(video_path, srt_path, output_path):
-    """使用 FFmpeg 将视频与 SRT 字幕合并"""
-    # 1. 验证输入文件
-    validate_file(video_path, "video")
-    validate_file(srt_path, "subtitle")
-    # 2. FFmpeg 指令
-    ffmpeg_cmd = [
-        'ffmpeg',
-        '-i', video_path,     # 输入视频
-        '-i', srt_path,       # 输入字幕
-        '-c:v', 'copy',       # 视频无损copy
-        '-c:a', 'copy',       # 音频无损copy
-        '-c:s', 'mov_text',   # 字幕转换为 mp4 可识别格式
-        '-metadata:s:s:0', 'language=chi',  # 字幕语言设置为中文
-        output_path
-    ]
-    # 强制字幕按 UTF-8 解码（避免乱码）
-    ffmpeg_cmd.insert(3, '-sub_charenc')
-    ffmpeg_cmd.insert(4, 'UTF-8')
-    try:
-        # 3. 调用 FFmpeg 进行处理
-        result = subprocess.run(
-            ffmpeg_cmd,
-            check=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        print(f"成功生成视频: {output_path}")
-        print(result.stdout)
-    except subprocess.CalledProcessError as e:
-        print(f"FFmpeg 处理失败: {e.stderr}")
-        raise
-    except Exception as e:
-        print(f"运行 FFmpeg 时发生异常: {e}")
-        raise
-def main():
-    # 输入文件路径（可自行修改）
-    video_path = r"SS.online_Gesture Drawing Practice _ 20 and 40 sec. poses_1080p.mp4"
-    srt_path = r"SS.online_Gesture Drawing Practice _ 20 and 40 sec. poses_1080p.srt"
-    output_path = "output.mp4"
-    # 合并视频 + 字幕
-    merge_video_with_subtitles(video_path, srt_path, output_path)
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"程序错误: {e}")
-        sys.exit(1)
+Opencode 
+https://learnopencode.com/
 
 
 
