@@ -676,6 +676,16 @@ WPF
 https://youtu.be/lbyID3KXLOU?si=gdMd1V_RD4YU1Zrb
 
 
+DIY Google Assisant With Raspberry Pi
+https://www.youtube.com/shorts/6h46gpdTIno#:~:text=DIY%20Google%20Nest%20Mini%20With%20Raspberry%20Pi,Google%20Assistant%20SDK%20Python%20%7C%20Coders%20Cafe.
+
+
+實作 WPF 複合控制項
+https://learn.microsoft.com/zh-tw/dotnet/desktop/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms
+
+
+
+
 
 
 
