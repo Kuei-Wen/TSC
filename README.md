@@ -670,6 +670,9 @@ Docker 环境安装提供两种方式：国内服务器推荐一键脚本（基�
 
 文档明确声明是“官方基础配置+生产增强”，且不覆盖HA/多节点场景。
 
+Microsoft Speech SDK 
+https://github.com/Azure-Samples/cognitive-services-speech-sdk?tab=readme-ov-file
+https://learn.microsoft.com/en-us/azure/ai-services/speech-service/quickstarts/setup-platform?tabs=linux%2Cdebian%2Cdotnetcli%2Cjre%2Cmaven%2Cnodejs%2Cmac%2Cpypi&pivots=programming-language-python
 
 
 WPF
@@ -682,6 +685,21 @@ https://www.youtube.com/shorts/6h46gpdTIno#:~:text=DIY%20Google%20Nest%20Mini%20
 
 實作 WPF 複合控制項
 https://learn.microsoft.com/zh-tw/dotnet/desktop/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms
+
+OpenCode 
+https://github.com/vbgate/learn-opencode
+
+Google Antigravity：無經驗小白也能做出桌面版應用程式和App
+https://vocus.cc/article/6934212afd897800016e3857
+
+[ Google IDE 工具] 藉由 Google Antigravity IDE 工具，來體驗 AI 直接實作個人網站
+https://medium.com/@simon3458/google-antigravity-ide-intro-2025-1-e8e6a4675a36
+
+
+
+樹莓派 5 打造最強 AI 助理：OpenClaw 安裝、Gemini 模型設定與 Telegram 連動全攻略
+https://vanix.github.io/2026/02/openclaw-on-raspberrypi-googleantigravity.html
+
 
 
 
