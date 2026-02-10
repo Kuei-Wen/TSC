@@ -19,6 +19,9 @@ https://playwright.dev/docs/writing-tests
 Playwright 玩家攻略：從新手村到魔王關系
 https://ithelp.ithome.com.tw/articles/10376953
 
+https://medium.com/@sreekanth.parikipandla/automating-wpf-applications-with-flaui-and-reqnroll-in-c-bf6c637f32f2
+使用 FlaUI 和 ReqnRoll 在 C# 中自動化 WPF 應用程式
+
 Google翻譯API
 https://ithelp.ithome.com.tw/m/articles/10218704
 
