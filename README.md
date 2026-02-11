@@ -21,6 +21,9 @@ https://ithelp.ithome.com.tw/articles/10376953
 
 https://medium.com/@sreekanth.parikipandla/automating-wpf-applications-with-flaui-and-reqnroll-in-c-bf6c637f32f2
 使用 FlaUI 和 ReqnRoll 在 C# 中自動化 WPF 應用程式
+FlaUI
+https://github.com/FlaUI/FlaUI
+https://www.youtube.com/playlist?list=PLacgMXFs7kl_fuSSe6lp6YRaeAp6vqra9
 
 Google翻譯API
 https://ithelp.ithome.com.tw/m/articles/10218704
