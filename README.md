@@ -3,6 +3,16 @@
 https://medium.com/@ianchen0119/github-copilot-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7-%E6%8C%81%E7%BA%8C%E6%9B%B4%E6%96%B0-cfb2f52ab026
 
 
+
+Git 
+git fetch --all
+
+git pull --force
+git fetch --force
+想清理一些不再存在于远程仓库中的分支
+git fetch --all --prune
+
+
 https://www.youtube.com/watch?v=43Swz6stWwc
 https://www.youtube.com/watch?v=OBoDchKNKPE
 
