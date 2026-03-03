@@ -716,6 +716,9 @@ https://medium.com/@simon3458/google-antigravity-ide-intro-2025-1-e8e6a4675a36
 樹莓派 5 打造最強 AI 助理：OpenClaw 安裝、Gemini 模型設定與 Telegram 連動全攻略
 https://vanix.github.io/2026/02/openclaw-on-raspberrypi-googleantigravity.html
 
+Google Antigravity IDE 教學
+https://luke.ninja/tutorials/antigravity-tutorial-1.html
+
 
 
 
