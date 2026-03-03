@@ -720,9 +720,21 @@ Google Antigravity IDE 教學
 https://luke.ninja/tutorials/antigravity-tutorial-1.html
 
 
+用 agy-starter 體驗 Rules & Workflows
+與其從理論開始，不如直接動手試試。我們準備了一個完整的範例專案 `agy-starter`，讓你邊做邊學。
+https://memo.jimmyliao.net/p/antigravity-rules-and-workflows-ai
+https://github.com/AgentWorkshop/agy-starter
+
+Google Antigravity 介紹含實作
+https://medium.com/@simon3458/google-antigravity-ide-intro-2025-1-e8e6a4675a36
+
+https://www.techbang.com/posts/127856-google-antigravity-n8n-workflow-optimize-debug
 
 
 
 
+龍蝦
+https://ohya.co/blog/openclaw-docker-deploy-guide
 
-
+OpenClaw-AI助手入门教程-Docker+deepseek+飞书+nginx反向代理部署流程1
+https://www.ncnynl.com/archives/202602/6875.html
