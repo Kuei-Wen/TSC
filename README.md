@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=OBoDchKNKPE
 
 基於 playwright 的萬用AI爬蟲 Crawl4AI
 
-Playwright + Test Design + AI Agent：自動化測試實戰 系列
+Playwright + Test Design + AI Agent：自動化測試實戰 系列(有BDD和AI的整合)
 https://ithelp.ithome.com.tw/m/users/20169442/ironman/8719
 
 
@@ -108,8 +108,14 @@ https://learn.microsoft.com/zh-tw/dotnet/desktop/wpf/advanced/walkthrough-hostin
 Google Antigravity：無經驗小白也能做出桌面版應用程式和App
 https://vocus.cc/article/6934212afd897800016e3857
 
+使用Antigravity 和Spec-kit 進行規格導向的ADK 代理開發
+https://codelabs.developers.google.com/sdd-adk-antigravity?hl=zh_tw#0
+
 [ Google IDE 工具] 藉由 Google Antigravity IDE 工具，來體驗 AI 直接實作個人網站
 https://medium.com/@simon3458/google-antigravity-ide-intro-2025-1-e8e6a4675a36
+
+定要學會使用 GitHub spec kit — SDD 規格驅動開發
+https://milkmidi.medium.com/ai-%E6%99%82%E4%BB%A3-%E4%B8%80%E5%AE%9A%E8%A6%81%E5%AD%B8%E6%9C%83%E4%BD%BF%E7%94%A8-github-spec-kit-sdd-%E8%A6%8F%E6%A0%BC%E9%A9%85%E5%8B%95%E9%96%8B%E7%99%BC-f2df57cfdf3c
 
 
 
@@ -149,3 +155,63 @@ conda
 
 刪除資料夾
 最常用的指令是 rm -rf 資料夾名稱
+
+
+OneNote MCP 
+https://mcp.aibase.com/zh/server/1475585820550504486
+https://pgdash.io/blog/rag-with-postgresql.html
+https://blog.csdn.net/qq_29929123/article/details/142706895
+
+
+if d >= 6 and m >= 2:
+    
+elif  2<= d <=6 and m >= 2 :    
+    RunTwoMonhsWithThenSameYear()
+elif d = 1 and m >=2 :
+    RunOneMonthsWithPreviousMonth()    
+else:   
+    RunTwoMonthsWithDifferentYear()
+ --若pre m的解法為用公式算,可能讓前一年的部份不用另外處理
+ 
+dt = today() - days(1)
+y = year(dt)
+yy =year(dt)
+m = month(dt)
+mm = month(dt)
+d = day(dt)
+
+print("year:")
+print(y)
+print("month:")
+print(m)
+print("date:")
+print(d)
+
+
+if d >=6 & m >=2
+  yy = y
+  mm = m
+else if    d >=2 & d <=6 & m >=2
+  yy = y
+  mm = m-1
+else if   d =1 and m >=2
+  yy = y
+  mm = m-1
+else 
+  yy = y-1
+  mm = m-1
+    
+
+
+
+
+
+
+for (id in  ids ){
+  for(Year in  y:y) {
+    for(Mon in m:m) {
+      #sink(paste0("~/文件/log/",Year,"_",Mon,"_",id,".log"))
+      #id<-"1101"
+      #Year <-"2023"
+      #Mon <-"1"
+
