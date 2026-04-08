@@ -10,5 +10,10 @@ client_secret.json
 *.sql
 requirements.txt
 1.py
-1.html
+*.html
+*.js
+*.css
 OAI_CONFIG_LIST
+.github/
+.gitignore
+
