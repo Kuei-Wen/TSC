@@ -162,56 +162,5 @@ https://mcp.aibase.com/zh/server/1475585820550504486
 https://pgdash.io/blog/rag-with-postgresql.html
 https://blog.csdn.net/qq_29929123/article/details/142706895
 
-
-if d >= 6 and m >= 2:
-    
-elif  2<= d <=6 and m >= 2 :    
-    RunTwoMonhsWithThenSameYear()
-elif d = 1 and m >=2 :
-    RunOneMonthsWithPreviousMonth()    
-else:   
-    RunTwoMonthsWithDifferentYear()
- --若pre m的解法為用公式算,可能讓前一年的部份不用另外處理
- 
-dt = today() - days(1)
-y = year(dt)
-yy =year(dt)
-m = month(dt)
-mm = month(dt)
-d = day(dt)
-
-print("year:")
-print(y)
-print("month:")
-print(m)
-print("date:")
-print(d)
-
-
-if d >=6 & m >=2
-  yy = y
-  mm = m
-else if    d >=2 & d <=6 & m >=2
-  yy = y
-  mm = m-1
-else if   d =1 and m >=2
-  yy = y
-  mm = m-1
-else 
-  yy = y-1
-  mm = m-1
-    
-
-
-
-
-
-
-for (id in  ids ){
-  for(Year in  y:y) {
-    for(Mon in m:m) {
-      #sink(paste0("~/文件/log/",Year,"_",Mon,"_",id,".log"))
-      #id<-"1101"
-      #Year <-"2023"
-      #Mon <-"1"
-
+Visuval Studio Code With Agent Skilkls
+https://code.visualstudio.com/docs/copilot/customization/agent-skills
