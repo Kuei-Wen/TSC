@@ -164,3 +164,6 @@ https://blog.csdn.net/qq_29929123/article/details/142706895
 
 Visuval Studio Code With Agent Skilkls
 https://code.visualstudio.com/docs/copilot/customization/agent-skills
+
+Microsoft Agent Framework
+https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-python

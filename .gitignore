@@ -16,4 +16,5 @@ requirements.txt
 OAI_CONFIG_LIST
 .github/
 .gitignore
-
+*.md
+*.ps1
