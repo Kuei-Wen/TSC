@@ -164,6 +164,20 @@ https://blog.csdn.net/qq_29929123/article/details/142706895
 
 Visuval Studio Code With Agent Skilkls
 https://code.visualstudio.com/docs/copilot/customization/agent-skills
+預計4/18要處理的部份
+https://github.com/doggy8088/github-copilot-configs
+https://pcion123.github.io/2026/03/31/vscode-skill-intro/
+https://klab.tw/2026/03/github-copilot-setup-guide/
+
+記到Note中
+https://come880412.medium.com/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%BF%85%E5%82%99-%E4%BD%BF%E7%94%A8-github-copilot-%E4%B8%80%E5%80%8B%E6%9C%88%E7%9A%84%E5%BF%83%E5%BE%97-3a3a979fa5b9
+
+
 
 Microsoft Agent Framework
 https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-python
+Demo
+https://github.com/microsoft/agent-framework/blob/main/python/samples/01-get-started/01_hello_agent.py
+https://www.youtube.com/watch?v=gcEb4Cr-nWQ
+
+
