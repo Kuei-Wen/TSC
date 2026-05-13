@@ -4,6 +4,8 @@ https://medium.com/@ianchen0119/github-copilot-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7
 
 
 
+
+
 Git 
 git fetch --all
 
@@ -182,6 +184,9 @@ https://www.youtube.com/watch?v=gcEb4Cr-nWQ
 
 Google Antigravity
 https://codelabs.developers.google.com/getting-started-google-antigravity?hl=zh-tw#0
+
+AI時代的股票技術分析
+https://ithelp.ithome.com.tw/articles/10399912
 
 
 
