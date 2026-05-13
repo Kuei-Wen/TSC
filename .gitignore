@@ -18,3 +18,4 @@ OAI_CONFIG_LIST
 .gitignore
 *.md
 *.ps1
+AgentFramework.py
